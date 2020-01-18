@@ -1,0 +1,4 @@
+django
+uvicorn
+ariadne
+black
