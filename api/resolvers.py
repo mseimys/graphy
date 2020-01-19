@@ -24,7 +24,7 @@ def resolve_getCategory(_, info, id):
 
 @query.field("categories")
 def resolve_categories(_, info, offset, limit):
-    objects = list(Category.objects.all()[offset : offset + limit])
+    objects = Category.objects.all()[offset : offset + limit]
     return [model_to_dict(obj) for obj in objects]
 
 
