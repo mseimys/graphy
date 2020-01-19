@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic.base import RedirectView
+
+from api.views import graphql_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("graphql/", graphql_view, name="graphql"),
+    path("", RedirectView.as_view(pattern_name="graphql"), name="index",),
 ]

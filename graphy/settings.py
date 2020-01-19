@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "products",
     "api",
+    "ariadne.contrib.django",
 ]
 
 MIDDLEWARE = [
