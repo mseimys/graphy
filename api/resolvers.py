@@ -22,6 +22,12 @@ def resolve_getCategory(_, info, id):
     return model_to_dict(obj)
 
 
+@query.field("categories")
+def resolve_categories(_, info, offset, limit):
+    objects = list(Category.objects.all()[offset : offset + limit])
+    return [model_to_dict(obj) for obj in objects]
+
+
 @mutation.field("createCategory")
 def resolve_createCategory(_, info, name):
     obj, _ = Category.objects.get_or_create(name=name)

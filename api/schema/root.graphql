@@ -6,6 +6,7 @@ type Category {
 type Query {
   hello: String!
   getCategory(id: ID!): Category!
+  categories(limit: Int = 3, offset: Int = 0): [Category!]!
 }
 
 type Mutation {
