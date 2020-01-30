@@ -1,0 +1,13 @@
+type Category {
+  id: ID!
+  name: String!
+}
+
+extend type Query {
+  category(id: ID!): Category!
+  categories(limit: Int = 3, offset: Int = 0): [Category!]!
+}
+
+extend type Mutation {
+  createCategory(name: String): Category!
+}

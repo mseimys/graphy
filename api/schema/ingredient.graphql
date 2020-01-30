@@ -1,0 +1,18 @@
+input IngredientInput {
+  name: String!
+  categoryId: ID!
+}
+
+type Ingredient {
+  id: ID!
+  name: String!
+  category: Category!
+}
+
+extend type Query {
+  ingredients(limit: Int = 10, offset: Int = 0): [Ingredient!]!
+}
+
+extend type Mutation {
+  createIngredient(input: IngredientInput!): Ingredient
+}

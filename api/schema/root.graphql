@@ -1,14 +1,8 @@
-type Category {
-  id: ID!
-  name: String!
-}
+scalar Datetime
+scalar Date
 
 type Query {
   hello: String!
-  getCategory(id: ID!): Category!
-  categories(limit: Int = 3, offset: Int = 0): [Category!]!
 }
 
-type Mutation {
-  createCategory(name: String): Category
-}
+type Mutation
