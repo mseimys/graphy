@@ -1,5 +1,7 @@
 # GraphQL Testbed
 
+Uses [Ariadne](https://ariadnegraphql.org/) for schema-first GraphQL.
+
 ## Queries
 
 ```
