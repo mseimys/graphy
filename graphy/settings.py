@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "products",
     "api",
     "ariadne.contrib.django",
+    "channels",
 ]
 
 MIDDLEWARE = [
@@ -72,7 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "graphy.wsgi.application"
-
+ASGI_APPLICATION = "graphy.asgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

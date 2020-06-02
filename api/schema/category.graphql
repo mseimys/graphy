@@ -13,3 +13,7 @@ extend type Mutation {
   createCategory(name: String!): Category!
   deleteCategory(id: ID!): ID!
 }
+
+extend type Subscription {
+  categoryAdded: Category!
+}

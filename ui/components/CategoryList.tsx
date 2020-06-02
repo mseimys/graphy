@@ -40,6 +40,15 @@ const DELETE_CATEGORY = gql`
   }
 `;
 
+const CATEGORY_SUBSCRIPTION = gql`
+  subscription onCategoryAdded {
+    categoryAdded {
+      id
+      name
+    }
+  }
+`;
+
 export function CategoryList() {
   const { loading, error, data } = useQuery(CATEGORY_LIST);
   const [name, setName] = React.useState("");

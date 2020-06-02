@@ -81,3 +81,11 @@ mutation createIngredient($input: IngredientInput!){
   }
 }
 ```
+
+### Subscriptions
+
+```
+subscription {
+  counter
+}
+```
