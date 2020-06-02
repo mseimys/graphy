@@ -51,6 +51,12 @@ webpack-dev-server                   # Runs React+Webpack+TypeScript frontend, p
 
 ```
 mutation {
+  deleteCategory(id: 123)
+}
+```
+
+```
+mutation {
   createCategory(name: "Abrakadabra") {
     id
     name

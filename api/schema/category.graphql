@@ -1,13 +1,15 @@
 type Category {
   id: ID!
   name: String!
+  created: Datetime
 }
 
 extend type Query {
   category(id: ID!): Category!
-  categories(limit: Int = 3, offset: Int = 0): [Category!]!
+  categories(limit: Int = 10, offset: Int = 0): [Category!]!
 }
 
 extend type Mutation {
-  createCategory(name: String): Category!
+  createCategory(name: String!): Category!
+  deleteCategory(id: ID!): ID!
 }
