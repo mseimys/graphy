@@ -4,6 +4,7 @@ import { useQuery, useMutation } from "@apollo/react-hooks";
 
 import { Delete } from "./Delete";
 import { Container } from "./Container";
+import { Input, Button, RowBlock, Title } from "./common";
 
 const CategoryListPage = {
   fragments: {
@@ -94,25 +95,25 @@ export function CategoryList() {
   console.log("Render", data.categories);
   return (
     <Container>
-      <h1>Categories</h1>
-      <div>
-        <input
+      <Title>Categories</Title>
+      <RowBlock>
+        <Input
           type="text"
+          placeholder="Enter category name"
           value={name}
           onChange={(e: any) => setName(e.target.value)}
         />
-        <button onClick={handleAdd}>Add</button>
-      </div>
+        <Button onClick={handleAdd}>Add</Button>
+      </RowBlock>
       <div>
-        <ul>
-          {data.categories.map(({ id, name }: any) => (
-            <li key={id}>
-              <p>
-                {id}: {name} <Delete onClick={() => handleDelete(id)} />
-              </p>
-            </li>
-          ))}
-        </ul>
+        {data.categories.map(({ id, name }: any) => (
+          <RowBlock key={id}>
+            <div>
+              ID={id}: {name}
+            </div>
+            <Delete onClick={() => handleDelete(id)} />
+          </RowBlock>
+        ))}
       </div>
     </Container>
   );

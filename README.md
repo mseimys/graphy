@@ -3,6 +3,8 @@
 Uses [Ariadne](https://ariadnegraphql.org/) for schema-first GraphQL in Python.
 [Apollo](https://www.apollographql.com/docs/react/) for React is used to bind frontend to GraphQL.
 
+![UI](docs/ui.png)
+
 ## Running
 
 ```

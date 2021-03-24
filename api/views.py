@@ -9,6 +9,7 @@ from .constants import SCHEMAS_DIRECTORY
 class GraphQLPlayground(GraphQLView):
     playground_options = {
         "request.credentials": "same-origin",
+        "schema.polling.interval": 30000,
         "schema.polling.enable": False,
     }
 
