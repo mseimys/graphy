@@ -1,6 +1,6 @@
 ariadne==0.13.0
 black==20.8b1
 channels==3.0.3
-Django==3.1.10
+Django==3.1.12
 django-querycount==0.7.0
 uvicorn==0.13.4
