@@ -3,8 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <title>GraphQL with React!</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        color: rgb(52, 72, 84);
+        overflow: hidden;
+      }
+      #background {
+        background-image: conic-gradient(
+          from 180deg at 50% 50%,
+          rgba(36, 209, 101, 0.09) 0deg,
+          rgba(226, 214, 54, 0.09) 55.3deg,
+          rgba(254, 108, 91, 0.09) 120deg,
+          rgba(204, 60, 203, 0.09) 165deg,
+          rgba(159, 51, 253, 0.09) 213.75deg,
+          rgba(24, 117, 243, 0.09) 288.12deg,
+          rgba(22, 119, 240, 0.09) 320deg,
+          rgba(36, 209, 101, 0.09) 360deg
+        );
+        height: 130vmax;
+        left: 50%;
+        margin: -67.5vmax 0 0 -67.5vmax;
+        position: absolute;
+        top: 50vh;
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+        transition: 23s linear transform;
+        width: 130vmax;
+        will-change: transform;
+        z-index: -999;
+      }
+      .lighter {
+        color: rgb(103, 120, 138);
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <div id="background"></div>
   </body>
 </html>

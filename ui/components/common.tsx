@@ -28,6 +28,7 @@ export const Button = styled.button`
   cursor: pointer;
   color: white;
   opacity: 0.8;
+  transition: 0.3s;
 
   &:hover {
     box-shadow: none;

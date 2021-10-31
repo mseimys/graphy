@@ -16,6 +16,7 @@ export const Delete = styled.button`
   cursor: pointer;
   color: white;
   flex: none;
+  transition: 0.3s;
 
   &:hover {
     box-shadow: none;
